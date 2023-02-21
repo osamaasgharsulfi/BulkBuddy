@@ -1,0 +1,278 @@
+{
+	"info": {
+		"_postman_id": "9305a5a2-ce0c-4ec7-bc8c-11039725b7f9",
+		"name": "BulkBody",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"osama\",\r\n    \"lastName\" : \"asghar\",\r\n    \"mobileNumber\":  \"03125920981\",\r\n    \"gender\": \"male\",\r\n    \"email\": \"osamaasghar073@gmail.com\",\r\n    \"password\": \"usama123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"osamaasghar073@gmail.com\",\r\n    \"password\": \"usama123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Category",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoidXNlciIsImlhdCI6MTY3Njg3NDA2OX0.-JABy1GXTB270m4Et_lNxswASHgjgP8NRl8fPQPMKow",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "categoryName",
+							"value": "Health gadgets",
+							"type": "default"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/osama.asghar2/Pictures/Screenshots/image.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/addCategory",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"addCategory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Category",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoidXNlciIsImlhdCI6MTY3Njg3NDA2OX0.-JABy1GXTB270m4Et_lNxswASHgjgP8NRl8fPQPMKow",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "categoryName",
+							"value": "Electronics",
+							"type": "default"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/osama.asghar2/Downloads/eberhard-grossgasteiger-JuPx4Y7J8GA-unsplash.jpg"
+						},
+						{
+							"key": "categoryID",
+							"value": "63f4508ec903770433cbcbb5",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/updateCategory",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"updateCategory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get All Category",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoidXNlciIsImlhdCI6MTY3Njg3NDA2OX0.-JABy1GXTB270m4Et_lNxswASHgjgP8NRl8fPQPMKow",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/getAllCategory",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"getAllCategory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoidXNlciIsImlhdCI6MTY3Njk1NTUxM30.pID1ac3doaNboYiN_ZWY6zhGmp1vNOlE7EJE9lATv4Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Name",
+							"value": "Oppo F19",
+							"type": "default"
+						},
+						{
+							"key": "Images",
+							"type": "file",
+							"src": [
+								"/C:/Users/osama.asghar2/Downloads/myphoto.jpg",
+								"/C:/Users/osama.asghar2/Downloads/eberhard-grossgasteiger-JuPx4Y7J8GA-unsplash.jpg"
+							]
+						},
+						{
+							"key": "Description",
+							"value": "Mobile phone",
+							"type": "default"
+						},
+						{
+							"key": "Price",
+							"value": "100",
+							"type": "default"
+						},
+						{
+							"key": "CategoryID",
+							"value": "63f4508ec903770433cbcbb5",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/addProduct",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"addProduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get ALl products",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoidXNlciIsImlhdCI6MTY3Njk1NTUxM30.pID1ac3doaNboYiN_ZWY6zhGmp1vNOlE7EJE9lATv4Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/getAllProducts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"getAllProducts"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
